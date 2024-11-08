@@ -1,5 +1,7 @@
 <<<<<<< HEAD
-Desplegada en netlify
+
+# Desplegada en netlify
+
 https://rick-morty-app-d8e563.netlify.app/
 
 # Getting Started with Create React App
