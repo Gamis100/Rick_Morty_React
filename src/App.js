@@ -9,9 +9,8 @@ function App() {
     const api = await fetch("https://rickandmortyapi.com/api/character")
     const characterApi= await api.json();
     //console.log(characterApi);
-    setCharacters(characterApi.results)
+    setCharacters(characterApi.results);
   };
-
 
   return (
     <div className="App">
@@ -20,7 +19,8 @@ function App() {
         {characters ?(
           <Characters characters={characters} setCharacters={setCharacters}/>
         ):(
-          <><img src={imageRickMorty} alt="Rick & Morty" className='img-home'/>
+          <>
+          <img src={imageRickMorty} alt="Rick & Morty" className='img-home'/>
           <button onClick={reqApi} className='btn-search'>Buscar personajes</button>
           </>
 

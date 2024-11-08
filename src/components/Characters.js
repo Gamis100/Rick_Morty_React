@@ -1,17 +1,17 @@
 export default function Characters(props) {
-    const { characters,setCharacters} = props;
-    
+    const { characters, setCharacters } = props;
+
     const resetCharacters = () => {
-        setCharacters(null)
+        setCharacters(null);
     };
 
     return (
         <div className="characters">
             <h1>Personajes</h1>
-            <span className="back-home" onClick={resetCharacters}>Volver a la home</span>
+            <button className="back-home" onClick={resetCharacters}>Volver a la home</button>
             <div className="container-characters">
-                {characters.map((character, index) => (
-                    <div className="character-container" key={index}>
+                {characters.map((character) => (
+                    <div className="character-container" key={character.id}>
                         <div>
                             <img src={character.image} alt={character.name} />
                         </div>
@@ -42,8 +42,7 @@ export default function Characters(props) {
                     </div>
                 ))}
             </div>
-            <span className="back-home" onClick={resetCharacters}>Volver a la home</span>
+            <button className="back-home" onClick={resetCharacters}>Volver a la home</button>
         </div>
     );
 }
-
